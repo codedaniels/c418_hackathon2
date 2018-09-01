@@ -10,14 +10,6 @@ body {
     box-sizing: border-box;
 }
 
-.mute {
-    font-family: "Arial Unicode MS";
-}
-
-.volumeUp {
-    background-color: transparent;
-}
-
 .header {
     margin-top: 1.5em;
     height: 6em;
@@ -43,7 +35,7 @@ body {
 }
 
 .image-size {
-    height: 20em;
+    height: 50vh;
     object-fit: scale-down;
     margin: auto;
     align-items: center;
@@ -58,12 +50,12 @@ body {
 
 .weather-bg {
     text-align: center;
-    margin-top: 1em;
+    margin-top: 5em;
     margin-bottom: 1em;
 }
 
 .weather-text {
-    font-size: 1em;
+    font-size: 1.3em;
     text-align: center;
 }
 
@@ -75,11 +67,10 @@ body {
 }
 
 .map-section {
-    margin-top: 1em;
     width: 100%;
     display: flex;
     justify-content: center;
-    height: 20em;
+    height: 45vh;
 }
 
 #theMap{
@@ -91,18 +82,20 @@ body {
 
 .plane{
     position: fixed;
-    height: 20vh;
-    width: 20vw;
+    height: 5vh;
+    width: 5vw;
     background-image: url("images/Plane_9_transparent_background.png");
     background-size: contain;
     background-repeat: no-repeat;
+    opacity: 0;
     animation: flyPlane 3s;
 }
 
 @keyframes flyPlane {
-    0%      {right:0;bottom:0;transform: scale(1,1);}
-    50%     {right:35vw;bottom:40vh;transform: scale(4,4);}
-    100%    {right:110vw;bottom:120vh;transform: scale(1,1);}
+    0%      {right:0;bottom:0;transform: scale(5,5);opacity: 1}
+    50%     {right:35vw;bottom:40vh;transform: scale(9,9);opacity: 1}
+    95%    {right:110vw;bottom:130vh;transform: scale(5,5);opacity: 0.7}
+    100%    {right:110vw;bottom:130vh;transform: scale(1,1);opacity: 0}
 }
 
 .wikipedia-section {
@@ -119,6 +112,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+
 }
 
 .wikipedia-text {
@@ -143,7 +137,10 @@ div#nomNomPics0, div#nomNomPics1, div#nomNomPics2, div#nomNomPics3 {
     height: 30vh;
     background-size: contain;
     background-repeat: no-repeat;
-    /*background-image: url("images/Cup-Noodles.jpg"); */
+}
+
+.vol {
+    background: transparent;
 }
 
 @media only screen and (max-width: 992px) {
@@ -152,13 +149,10 @@ div#nomNomPics0, div#nomNomPics1, div#nomNomPics2, div#nomNomPics3 {
         display: none;
     }
 
-    .postcard {
-        display: none;
-    }
-
     .vol {
         position: fixed;
         top: 0;
         right: 1em;
+        background: transparent;
     }
 }
