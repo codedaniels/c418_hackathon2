@@ -10,10 +10,6 @@ body {
     box-sizing: border-box;
 }
 
-.mute {
-    font-family: "Arial Unicode MS";
-}
-
 .header {
     margin-top: 1.5em;
     height: 6em;
@@ -40,7 +36,6 @@ body {
 
 .image-size {
     height: 50vh;
-    /*height: 20em;*/
     object-fit: scale-down;
     margin: auto;
     align-items: center;
@@ -72,12 +67,10 @@ body {
 }
 
 .map-section {
-    /*margin-top: 1em;*/
     width: 100%;
     display: flex;
     justify-content: center;
     height: 45vh;
-    /*height: 20em;*/
 }
 
 #theMap{
@@ -144,7 +137,10 @@ div#nomNomPics0, div#nomNomPics1, div#nomNomPics2, div#nomNomPics3 {
     height: 30vh;
     background-size: contain;
     background-repeat: no-repeat;
-    /*background-image: url("images/Cup-Noodles.jpg"); */
+}
+
+.vol {
+    background: transparent;
 }
 
 @media only screen and (max-width: 992px) {
@@ -153,13 +149,10 @@ div#nomNomPics0, div#nomNomPics1, div#nomNomPics2, div#nomNomPics3 {
         display: none;
     }
 
-    /*.postcard {*/
-        /*display: none;*/
-    /*}*/
-
     .vol {
         position: fixed;
         top: 0;
         right: 1em;
+        background: transparent;
     }
 }
