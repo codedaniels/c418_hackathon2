@@ -109,11 +109,8 @@ function initMap() {
             })(marker, capitalIndex));
         }
         winningCity = cities[Math.floor(Math.random() * cities.length)];
-<<<<<<< HEAD
-=======
         console.log(winningCity);
         gmap.fitBounds(bounds); //try to fit
->>>>>>> bed57dc5ae2264b903a5c4519d1948b231a52500
         getFlickr(winningCity.longitude,winningCity.latitude,'city');
         getFlickr(winningCity.longitude,winningCity.latitude,'food',false);
         makeRequestForWeather(winningCity);
